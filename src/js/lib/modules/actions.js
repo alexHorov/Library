@@ -39,14 +39,6 @@ $.prototype.index = function() {
 $.prototype.find = function(selector) {
     let numberOfItems = 0;
     let counter = 0;
-<<<<<<< HEAD
-    const copyObj = Object.assign({}, this);
-    for (let i = 0; i < copyObj.length; i++) {
-        const arr = copyObj[i].querySelectorAll(selector);
-
-        if (arr.length == 0) {
-            continue
-=======
 
     const copyObj = Object.assign({}, this);
 
@@ -54,18 +46,12 @@ $.prototype.find = function(selector) {
         const arr = copyObj[i].querySelectorAll(selector);
         if (arr.length == 0) {
             continue;
->>>>>>> main
         }
 
         for (let j = 0; j < arr.length; j++) {
             this[counter] = arr[j];
             counter++;
         }
-<<<<<<< HEAD
-        numberOfItems += arr.length;
-    }
-    this.length = numberOfItems;
-=======
 
         numberOfItems += arr.length;
     }
@@ -119,7 +105,6 @@ $.prototype.siblings = function() {
 
     this.length = numberOfItems;
 
->>>>>>> main
     const objLength = Object.keys(this).length;
     for (; numberOfItems < objLength; numberOfItems++) {
         delete this[numberOfItems];
